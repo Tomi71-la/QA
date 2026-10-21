@@ -1,0 +1,88 @@
+/* ---------- Page basics ---------- */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e9eef4;
+    color: #1f2933;
+}
+
+/* ---------- The card ---------- */
+.quiz-container {
+    width: 90%;
+    max-width: 480px;
+    padding: 28px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+
+h1,
+h2 {
+    margin: 0 0 14px;
+}
+
+p {
+    margin: 0 0 18px;
+}
+
+/* ---------- Screens (spec Step 1: show only the Start Screen) ---------- */
+#quiz-screen,
+#result-screen {
+    display: none;
+}
+
+/* ---------- Buttons ---------- */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #2b4c7e;
+    border: 2px solid #2b4c7e;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:focus-visible {
+    outline: 3px solid #f2b705;
+    outline-offset: 2px;
+}
+
+/* ---------- Answer choices (buttons created by JavaScript) ---------- */
+#choices {
+    margin-bottom: 18px;
+}
+
+.choice-btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: left;
+    color: #1f2933;
+    background-color: #f4f6f9;
+    border: 2px solid #c9d2dd;
+}
+
+/* Highlight for the choice the user clicked */
+.choice-btn.selected {
+    background-color: #d6e4f7;
+    border-color: #2b4c7e;
+}
+
+/* ---------- Next button before an answer is picked ---------- */
+#next-btn:disabled {
+    color: #8a939c;
+    background-color: #d9dde2;
+    border-color: #d9dde2;
+    cursor: not-allowed;
+}
+
+/* ---------- Results screen ---------- */
+#score {
+    font-size: 28px;
+    font-weight: bold;
+}
